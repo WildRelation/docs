@@ -8,8 +8,20 @@ Incoming traffic passes through multiple routing layers before reaching workload
 
 ## DNS
 
-A DNS record points to the **public IP address** of the cloud.
-This IP is used by users to access the system.
+DNS records point to the **public IP addresses** of the cloud.
+These entries allow users and services to access the system using domain names instead of raw IPs.
+
+There are multiple DNS entries configured, below are some examples:
+
+* **System cluster**
+
+  * `*.cloud.cbh.kth.se` (resolves cloud.cbh.kth.se and api.cloud.cbh.kth.se for example)
+  * ...
+* **Application clusters**
+
+  * `*.app.cloud.cbh.kth.se`
+  * `*.vm-app.cloud.cbh.kth.se`
+  * ...
 
 ## Firewall / NAT
 
